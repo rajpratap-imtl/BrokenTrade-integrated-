@@ -1,0 +1,15 @@
+{
+  "name": "brokentrade-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:bt-backend\" \"npm run dev:bt-frontend\" \"npm run dev:pt-backend\" \"npm run dev:pt-frontend\"",
+    "dev:bt-backend": "cd BrokenTrade.com/backend && npm run dev",
+    "dev:bt-frontend": "cd BrokenTrade.com/frontend && npm run dev",
+    "dev:pt-backend": "cd paperTrading/backend && npm run dev",
+    "dev:pt-frontend": "cd paperTrading/frontend && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

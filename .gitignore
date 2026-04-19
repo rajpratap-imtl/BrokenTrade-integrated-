@@ -1,0 +1,49 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+!*.env.example
+
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+coverage/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.njsproj
+*.sln
+*.sw?
+
+# Test files (temporary)
+test-jwt-verify.js
+test-auth-debug.js
+paperTrading/backend/test-jwt-verify.js
+
+# Temporary documentation (optional - remove these lines if you want to keep them)
+CHANGES_MADE.md
+DEBUG_INSTRUCTIONS.md
+DEBUGGING_SUMMARY.md
+FINAL_FIX.md
+SUCCESS_SUMMARY.md
