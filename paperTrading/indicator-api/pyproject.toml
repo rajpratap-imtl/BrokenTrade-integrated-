@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indicator-api"
+version = "0.0.0"
+description = "Indicator API for algotrader"
+authors = [{ name = "Sebastian Stolz", email = "admin@tradingnerd.io" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "asyncpg",
+    "python-dotenv",
+    "pydantic",
+    "redis",
+]
+
+[project.urls]
+Homepage = "https://github.com/s-stolz/algotrader"
+Repository = "https://github.com/s-stolz/algotrader"
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.14.11",
+    "black>=24.4.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[project.scripts]
+lint = "ruff check app/ *.py && black --check app/ *.py"
+lint-fix = "ruff check --fix app/ *.py && black app/ *.py"

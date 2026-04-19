@@ -1,0 +1,12 @@
+.vscode
+.venv
+config/.env*
+!config/.env.secrets.example
+*/.env
+node_modules
+__pycache__
+*.DS_Store
+.claude
+
+# Development artifacts
+indicator_engine_example.ipynb

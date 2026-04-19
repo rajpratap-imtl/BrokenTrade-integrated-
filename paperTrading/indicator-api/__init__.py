@@ -1,0 +1,1 @@
+"""Indicator API for AlgoTrader."""
