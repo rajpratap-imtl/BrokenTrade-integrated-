@@ -1,6 +1,7 @@
 import { useTradingStore } from '../stores/tradingStore';
 
-const BACKEND_URL = 'http://localhost:5001';
+// Use relative URL when served from same server
+const BACKEND_URL = '';
 
 /**
  * Centralized API client that automatically includes authentication token

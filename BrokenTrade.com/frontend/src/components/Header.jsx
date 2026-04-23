@@ -35,7 +35,7 @@ export function Header() {
     { label: 'Learn', path: '/learn' },
     { label: 'Brokers', path: '/brokers' },
     { label: 'Tools', path: '/tools' },
-    { label: 'Paper Trading', path: null, external: 'http://localhost:5174' }, // External link
+    { label: 'Paper Trading', path: null, external: 'http://localhost:5001' }, // PaperTrading backend serves frontend
   ];
 
   console.log('[Header] Nav items:', navItems.map(i => i.label));

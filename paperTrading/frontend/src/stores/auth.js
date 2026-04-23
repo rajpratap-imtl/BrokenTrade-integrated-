@@ -67,7 +67,7 @@ export const useAuthStore = defineStore('auth', () => {
 
     try {
       console.log('[Auth] Calling /api/auth/verify endpoint...');
-      const response = await fetch('http://localhost:5001/api/auth/verify', {
+      const response = await fetch('/api/auth/verify', {
         headers: {
           'Authorization': `Bearer ${token.value}`,
         },
@@ -137,7 +137,7 @@ export const useAuthStore = defineStore('auth', () => {
 
   async function checkBackendAvailability() {
     try {
-      const response = await fetch('http://localhost:5001/api/auth/health');
+      const response = await fetch('/api/auth/health');
       return response.ok;
     } catch {
       return false;

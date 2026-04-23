@@ -10,7 +10,8 @@ import { useAuthStore } from "./stores/auth";
 const app = createApp(App);
 const pinia = createPinia();
 
-const websocketUrl = import.meta.env.VITE_WS_URL || "ws://localhost:5000/stream";
+// Use relative WebSocket URL when served from same server
+const websocketUrl = import.meta.env.VITE_WS_URL || `ws://${window.location.host}/stream`;
 wsService.connect(websocketUrl);
 app.config.globalProperties.$wss = wsService;
 

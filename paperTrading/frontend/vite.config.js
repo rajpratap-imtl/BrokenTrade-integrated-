@@ -18,6 +18,11 @@ export default defineConfig(({ mode }) => {
       },
     },
     publicPath: "",
+    build: {
+      // Output to backend's dist folder
+      outDir: '../backend/dist',
+      emptyOutDir: true,
+    },
     server: {
       host: '0.0.0.0',
       port: Number(env.FRONTEND_PORT || 5173),
